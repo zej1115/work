@@ -1,0 +1,11 @@
+<template>
+	<div class="forgot-password">
+    <!-- 找回密码页 -->
+  </div>
+</template>
+
+<script>
+	export default {
+		name: "forgot-password"
+	}
+</script>
