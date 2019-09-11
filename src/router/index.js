@@ -25,14 +25,14 @@ let routes = [
 		]
 	},*/
   
-  /* 消息系统 begin */
+  /* 服务系统 begin */
   {
     path: '/',
     component: () => import('../pages/index'),
     children: [
       {
         path: '/',
-        name: '消息系统欢迎页面',
+        name: '服务系统欢迎页面',
         component: () => import('../pages/Home/home')
       },
     ]

@@ -1,12 +1,14 @@
 <template>
-  <div id="main">
-    <div class="w100p h64 pos-fix pos-c-t z-100 HeaderWrap">
-      <!--logo-->
-      <div class="HeaderLeft">
-<!--        <img src="./images/logo.png">-->
-      </div>
+  <div class="HeaderWrap">
+    <div class="w100p h8p pos-fix pos-c-t z-100 HeaderMain">
+      <!--logoBegin-->
+        <h1>
+          <img src="">
+        </h1>
+      <!--logoEnd-->
+
       <!--头部右侧-->
-      <div class="fr HeaderRight">
+      <div class="fr w35p h100p pos-abs r0 t0 bg-color-pink HeaderRightWrap">
         <div class="fl HeaderItem">
           <div class="ProfileName">欢迎你，xxx</div>
           <div></div>
@@ -39,7 +41,7 @@
 </script>
 
 <style>
-  .HeaderWrap { background: #0096ff; }
+  .HeaderMain { background: #0096ff;}
 </style>
 
 <!--<style lang="stylus" rel="stylesheet/stylus" scoped>
