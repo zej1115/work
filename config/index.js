@@ -2,7 +2,7 @@
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
 
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   dev: {
@@ -10,11 +10,22 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      // 目标地址映射为apis
+      '/apis': {
+        // target: 'http://172.18.11.49:9002/',  // 接口域名
+        target: 'http://172.18.12.63/',  // 接口域名
+        // secure: false,  // 如果是https接口，需要配置这个参数
+        changeOrigin: true,  //是否跨域
+        pathRewrite: {
+          '^/apis': ''   //需要rewrite的,
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8092, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -49,7 +60,7 @@ module.exports = {
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 
