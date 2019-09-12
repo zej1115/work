@@ -30,7 +30,8 @@ import {
   TimeSelect,
   TimePicker,
   Pagination,
-  Tooltip
+  Tooltip,
+  Tabs
 } from 'element-ui'
 
 //import methods from './methods/index'
@@ -57,6 +58,7 @@ Vue.use(TimeSelect);
 Vue.use(TimePicker);
 Vue.use(Pagination);
 Vue.use(Tooltip);
+Vue.use(Tabs)
 
 // Vue.prototype.isEmpty = methods.isEmpty;
 

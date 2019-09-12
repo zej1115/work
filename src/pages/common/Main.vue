@@ -1,7 +1,7 @@
 <template>
 	<div class="h100p pd-t62 main">
     <div class="w100p h100p">
-      
+      Main
       <div class="fl w220 h100p left-menu">
         <div class="h100p menu-box"></div>
       </div>

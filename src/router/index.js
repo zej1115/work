@@ -1,54 +1,43 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-/* login begin */
-// import Login from '../views/login'
-/* login end */
-
-/* Home begin */
-/*import Home from '../views/home'*/
-/* Home end */
-
+import Login from '../pages/Login';
+//import ForgotPassword from '../pages/ForgotPassword'
+import Index from '../pages/Index'
+import Main from '../pages/common/Main'
+import ControlUser from '../components/category/ControlUser/ControlUser.vue'
 
 Vue.use(Router);
 
 let routes = [
-  /*{
-		path: '/',
-		component: Index,
-		children: [
-			{
-				path: '/',
-				name: '欢迎页面',
-				component : () => import('../views/home')
-			}
-		]
-	},*/
-  
-  /* 服务系统 begin */
   {
-    path: '/',
-    component: () => import('../pages/index'),
+    path:'/',
+    name: 'Index',
+    component: () => import('../pages/Index'),
     children: [
       {
-        path: '/',
-        name: '服务系统欢迎页面',
-        component: () => import('../pages/Home/home')
-      },
+        path: '/main',
+        name: '主页',
+        component: Main
+      }
     ]
   },
   
+  // 登录
   {
     path: '/login',
-    name: 'login',
-    component: () => import('../pages/login'),
+    name: 'Login',
+    component: () => import('../pages/Login'),
   },
   
+  // 忘记密码
   {
-    path: '/forgot',
-    name: 'login',
-    component: () => import('../pages/login'),
-  },
+    path: '/controluser',/*forgotpassword*/
+    name: 'ControlUser',
+    component: ControlUser
+  }
+  
+  
 ];
 
 let router = new Router({
@@ -68,7 +57,7 @@ router.beforeEach((to, from, next) => {
       next();
     }
   } else {
-    if (to.path === '/login' || to.path === '/forgot-password') {
+    if (to.path === '/login' || to.path === '/controluser') {/*forgotpassword*/
       next();
     } else {
       router.push('/login');

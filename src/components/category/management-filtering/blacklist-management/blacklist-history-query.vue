@@ -1,12 +1,12 @@
 <template>
-  <di>
-  
-  </di>
+	<div>
+    黑名单历史查询页
+  </div>
 </template>
 
 <script>
 	export default {
-		name: "Home"
+		name: "blacklist-history-query"
 	}
 </script>
 

@@ -65,7 +65,7 @@
               </div>
               <div class="clear h20 lh20 other-action">
                 <div class="fl forgot-password">
-                  密码忘记了？<a @click="forgotPassword" href="javascript:void(0);">找回密码</a>
+                  密码忘记了？<a @click="forgotpassword" href="javascript:void(0);">找回密码</a>
                 </div>
                 
               </div>
@@ -167,7 +167,7 @@
             let resData = res.data;
             console.log(resData);
 						if (resData.status === 0) {
-							this.$router.push({ path: '/'});
+							this.$router.push({ path: '/main'});
             }
           });
           
@@ -178,9 +178,9 @@
           
         }
       },
-      
-      forgotPassword() {
-        this.$router.push({ path: '/forgot-password'});
+  
+      forgotpassword() {
+        this.$router.push({ path: '/controluser'});/*forgotpassword*/
       }
     }
   }

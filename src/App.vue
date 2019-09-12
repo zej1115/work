@@ -6,16 +6,9 @@
 
 <script>
 
-  //引入头部左侧导航公共组件
-  //import Header from './components/Header/Header.vue'
-  //import  NavLeft from './components/NavLeft/tree-menu-item.vue'
-
   export default {
     name: 'App',
-    components: {
-      //Header,
-      //NavLeft
-    }
+    components: {}
   }
 </script>
 
